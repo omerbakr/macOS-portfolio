@@ -11,6 +11,11 @@ body {
   background-position: center;
 }
 
+@theme {
+  --color-light-green: #8c9e76;
+  --color-dark-green: #284b00;
+}
+
 @utility flex-center {
   @apply flex items-center justify-center;
 }

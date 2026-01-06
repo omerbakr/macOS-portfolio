@@ -1,12 +1,12 @@
-import Image from "next/image"
-import { navIcons, navLinks } from "@/constants"
-import dayjs from "dayjs"
+import Image from "next/image";
+import dayjs from "dayjs";
+import { navIcons, navLinks } from "@/constants";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center p-2 px-5 text-white text-sm select-none">
+    <nav className="flex items-center justify-between p-2 px-5 text-sm text-white select-none">
       <div className="flex items-center gap-4">
-        <Image 
+        <Image
           src="/images/logo.svg"
           alt="logo"
           width={14}
@@ -17,7 +17,7 @@ const Navbar = () => {
         <p className="font-bold">Omer&apos;s Portfolio</p>
 
         <ul className="flex items-center gap-5 max-sm:hidden">
-          {navLinks.map(({name, id}) => (
+          {navLinks.map(({ name, id }) => (
             <li key={id} className="font-semibold">
               {name}
             </li>
@@ -27,7 +27,7 @@ const Navbar = () => {
 
       <div className="flex items-center gap-4.5">
         <ul className="flex items-center gap-4.5">
-          {navIcons.map(({id ,img}) => (
+          {navIcons.map(({ id, img }) => (
             <li key={id}>
               <Image
                 src={img}
@@ -43,7 +43,7 @@ const Navbar = () => {
         <time className="font-medium">{dayjs().format("ddd MMM D HH:mm")}</time>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

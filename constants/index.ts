@@ -1,28 +1,4 @@
-type NavLink = {
-  id: number;
-  name: string;
-  type: "finder" | "contact" | "resume";
-};
-
-type NavIcon = {
-  id: number;
-  img: string;
-};
-
-type DockAppId =
-  | "finder"
-  | "safari"
-  | "photos"
-  | "contact"
-  | "terminal"
-  | "trash";
-
-type DockApp = {
-  id: DockAppId;
-  name: string;
-  icon: string;
-  canOpen: boolean;
-};
+import { DockApp, NavIcon, NavLink } from "@/types";
 
 export const navLinks: readonly NavLink[] = [
   {
@@ -99,3 +75,16 @@ export const dockApps: readonly DockApp[] = [
     canOpen: false,
   },
 ];
+
+export const INITIAL_Z_INDEX = 1000;
+
+export const WINDOW_CONFIG = {
+  finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+};

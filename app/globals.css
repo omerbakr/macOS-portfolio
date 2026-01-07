@@ -14,6 +14,8 @@ body {
 @theme {
   --color-light-green: #8c9e76;
   --color-dark-green: #284b00;
+  --color-light-gray: #292a2c;
+  --color-dark-gray: #1d1e1e;
 }
 
 @utility flex-center {
@@ -31,5 +33,11 @@ body {
 @layer base {
   main {
     @apply h-dvh w-dvw overflow-hidden;
+  }
+}
+
+@layer components {
+  #terminal {
+    @apply bg-dark-gray absolute top-32 left-1/12 w-xl overflow-hidden rounded-xl border border-white/20 shadow-2xl drop-shadow-2xl;
   }
 }

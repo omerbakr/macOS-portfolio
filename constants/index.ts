@@ -1,4 +1,4 @@
-import { DockApp, NavIcon, NavLink } from "@/types";
+import { DockApp, NavIcon, NavLink, TechStack } from "@/types";
 
 export const navLinks: readonly NavLink[] = [
   {
@@ -73,6 +73,29 @@ export const dockApps: readonly DockApp[] = [
     name: "Archive",
     icon: "trash.png",
     canOpen: false,
+  },
+];
+
+export const techStack: readonly TechStack[] = [
+  {
+    category: "Frontend",
+    items: ["React.js", "Next.js", "TypeScript"],
+  },
+  {
+    category: "Styling",
+    items: ["Tailwind CSS", "CSS", "GSAP"],
+  },
+  {
+    category: "Backend",
+    items: ["Node.js"],
+  },
+  {
+    category: "Database",
+    items: ["MongoDB", "PostgreSQL"],
+  },
+  {
+    category: "Dev Tools",
+    items: ["Git", "GitHub"],
   },
 ];
 
